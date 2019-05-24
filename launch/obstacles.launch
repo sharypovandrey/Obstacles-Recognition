@@ -8,6 +8,6 @@
 		<param name="pixel_format" value="yuyv" />
 	</node>
 
-	<node name="obstacles_recognition" pkg="obstacles_recognition" type="obstacles_recognition" respawn="true" />
+	<node name="obstacles_recognition" pkg="obstacles_recognition" type="obstacles_recognition.py" respawn="true" />
 
 </launch>

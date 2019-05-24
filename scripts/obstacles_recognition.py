@@ -10,7 +10,7 @@ from image_preprocessor import preprocess_image
 pub = rospy.Publisher("/obstacles", String, queue_size=10)
 
 # load model
-model = tf.keras.models.load_model('../model/model.h5')
+model = tf.keras.models.load_model('/home/firefly/catkin_ws/src/obstacles_recognition/model/model.h5')
 model._make_predict_function()
 
 
@@ -28,10 +28,9 @@ def callback_image_received(msg):
 
 
 def main():
-    rospy.init_node("obstacle_detector")
+    rospy.init_node("obstacles_recognition")
     sub = rospy.Subscriber("/usb_cam/image_raw", Image, callback_image_received)
     rospy.spin()
-
 
 if __name__ == "__main__":
     try:
