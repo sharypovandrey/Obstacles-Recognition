@@ -1,7 +1,7 @@
 # Obstacles-Detector
 ROS package for detection of obstacles using the stereo camera
 
-sudo pip3 install drive-cli
+`sudo pip install pyyaml drive-cli`
 Install tesnorflow
 https://docs.khadas.com/edge/InstallTensorFlow.html
 ```
