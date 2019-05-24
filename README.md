@@ -57,7 +57,9 @@ make -j$(nproc --all)
 sudo make install
 ```
 
-Download this repo to your `~/catkin_ws/src/`
+Download this repo to your `cd ~/catkin_ws/src/ && git clone https://github.com/sharypovandrey/Obstacles-Recognition`
+
+Rename it `mv Obstacles-Recognition obstacles_recognition`
 
 ## IMPORTANT:
 Now path to the model is absolute:
