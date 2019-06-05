@@ -13,8 +13,8 @@ Download TensorFlow wheel for aarch64 to someplace like:~/Downloads, we will dow
 ```
 cd ~/Downloads
 wget https://github.com/lhelontra/tensorflow-on-arm/releases/download/v1.12.0/tensorflow-1.12.0-cp27-none-linux_aarch64.whl
-sudo pip install tensorflow-1.8.0-cp35-none-linux_aarch64.whl
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test 
+sudo pip install --ignore-installed tensorflow-1.12.0-cp27-none-linux_aarch64.whl # --ignore-installed solves problem with enum34
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get dist-upgrade
