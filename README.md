@@ -7,6 +7,7 @@ https://docs.khadas.com/edge/InstallTensorFlow.html
 ```
 sudo apt-get update
 sudo apt-get install python-pip python-dev
+sudo apt-get install ros-$(rosversion -d)-usb-cam
 ```
 Get TensorFlow Wheel for aarch64
 Download TensorFlow wheel for aarch64 to someplace like:~/Downloads, we will download version 1.12.0
