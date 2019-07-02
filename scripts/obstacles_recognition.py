@@ -5,9 +5,13 @@ from sensor_msgs.msg import Image
 import numpy as np
 import tensorflow as tf
 from image_preprocessor import preprocess_image
+from label_encode import Encoder
 
 # create publisher
 pub = rospy.Publisher("/obstacles", String, queue_size=10)
+
+# create labels encoder
+encoder = Encoder()
 
 # load model
 model = tf.keras.models.load_model('/home/firefly/catkin_ws/src/obstacles_recognition/model/model.h5')
@@ -21,7 +25,7 @@ def callback_image_received(msg):
     input_arr = np.array([img])
     # make prediction is there obstacle on the image or not
     prediction = model.predict(input_arr)
-    obstacle = "yes" if prediction[0][0] >= 0.5 else "no"
+    obstacle = encoder.decode_value(prediction[0])
     # publish result to /obstacles topic
     pub.publish(String(obstacle))
     rospy.logdebug("Obstacle: " + obstacle)

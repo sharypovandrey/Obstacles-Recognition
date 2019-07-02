@@ -78,4 +78,4 @@ Please, change it to your Firefly's path
 
 Subscribe to `/obstacles` topic
 
-It gives 'yes' or 'no' (obstacle)
+This topic provides values as '10', '30', '50' and 'more_than_50'. It means in what range the obstacle is.

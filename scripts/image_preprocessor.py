@@ -36,6 +36,9 @@ def preprocess_image(image_msg, width, height):
     # thats why size of the image is 640x240
     # if to split this image we get left and right cameras images
     split = np.split(resized_frame, 2, axis=1)
-    concatenated_img = np.dstack((split[0], split[1]))
+    left = split[0]
+    right = split[1]
+    abs_dif = np.abs(np.subtract(left, right))
+    concatenated_img = np.dstack((left, right, abs_dif))
 
     return concatenated_img.astype("float32")
