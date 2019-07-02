@@ -7,14 +7,15 @@ https://docs.khadas.com/edge/InstallTensorFlow.html
 ```
 sudo apt-get update
 sudo apt-get install python-pip python-dev
+sudo apt-get install ros-$(rosversion -d)-usb-cam
 ```
 Get TensorFlow Wheel for aarch64
 Download TensorFlow wheel for aarch64 to someplace like:~/Downloads, we will download version 1.12.0
 ```
 cd ~/Downloads
 wget https://github.com/lhelontra/tensorflow-on-arm/releases/download/v1.12.0/tensorflow-1.12.0-cp27-none-linux_aarch64.whl
-sudo pip install tensorflow-1.8.0-cp35-none-linux_aarch64.whl
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test 
+sudo pip install --ignore-installed tensorflow-1.12.0-cp27-none-linux_aarch64.whl # --ignore-installed solves problem with enum34
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get dist-upgrade
@@ -59,7 +60,7 @@ sudo make install
 
 Download this repo to your `cd ~/catkin_ws/src/ && git clone https://github.com/sharypovandrey/Obstacles-Recognition`
 
-Rename it `mv Obstacles-Recognition obstacles_recognition`
+Rename it `mv Obstacles-Recognition-master obstacles_recognition`
 
 ## IMPORTANT:
 Now path to the model is absolute:
