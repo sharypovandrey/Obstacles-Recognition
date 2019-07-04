@@ -5,7 +5,7 @@ from sensor_msgs.msg import Image
 import numpy as np
 import tensorflow as tf
 from image_preprocessor import preprocess_image
-from label_encode import Encoder
+from label_encoder import Encoder
 
 # create publisher
 pub = rospy.Publisher("/obstacles", String, queue_size=10)
