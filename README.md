@@ -1,7 +1,7 @@
 # Obstacles Recognition
 ## ROS package for obstacles detection using Stereo Camera, RK3399 and Tensorflow
 
-`sudo pip install pyyaml`
+`sudo pip install sklearn pyyaml`
 ### Install tesnorflow
 https://docs.khadas.com/edge/InstallTensorFlow.html
 ```
